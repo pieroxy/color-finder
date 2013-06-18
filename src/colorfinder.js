@@ -6,10 +6,10 @@ function ColorFinder(colorFactorCallback) {
   this.getMostProminentColor = function(imgEl) {
     var rgb = null;
     if (!this.callback) this.callback = function() { return 1; };
-    rgb = this.getMostProminentRGBImpl(imgEl, 6, rgb, colorFactorCallback);
-    rgb = this.getMostProminentRGBImpl(imgEl, 4, rgb, colorFactorCallback);
-    rgb = this.getMostProminentRGBImpl(imgEl, 2, rgb, colorFactorCallback);
-    rgb = this.getMostProminentRGBImpl(imgEl, 0, rgb, colorFactorCallback);
+    rgb = this.getMostProminentRGBImpl(imgEl, 6, rgb, this.callback);
+    rgb = this.getMostProminentRGBImpl(imgEl, 4, rgb, this.callback);
+    rgb = this.getMostProminentRGBImpl(imgEl, 2, rgb, this.callback);
+    rgb = this.getMostProminentRGBImpl(imgEl, 0, rgb, this.callback);
     return rgb;
   };
 
