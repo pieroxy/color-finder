@@ -1,6 +1,13 @@
-/*
-  This library is in development - use at your own risk
-*/
+// Copyright (c) 2013 Pieroxy <pieroxy@pieroxy.net>
+// This work is free. You can redistribute it and/or modify it
+// under the terms of the WTFPL, Version 2
+// For more information see LICENSE.txt or http://www.wtfpl.net/
+//
+// For more information, the home page:
+// http://pieroxy.net/blog/pages/color-finder/index.html
+//
+// Detection of the most prominent color in an image
+// version 1.0.0
 function ColorFinder(colorFactorCallback) {
   this.callback = colorFactorCallback;
   this.getMostProminentColor = function(imgEl) {
