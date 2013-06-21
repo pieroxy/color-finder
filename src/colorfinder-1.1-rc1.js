@@ -7,7 +7,7 @@
 // http://pieroxy.net/blog/pages/color-finder/index.html
 //
 // Detection of the most prominent color in an image
-// version 1.1.0-rc1
+// version 1.1.1-rc1
 
 function ColorFinder(colorFactorCallback) {
   this.callback = colorFactorCallback;
@@ -56,9 +56,9 @@ function ColorFinder(colorFactorCallback) {
     
     while ( (i += 4*factor) < length ) {
       if (data.data[i+3]>32) {
-        key = (data.data[i]>>degrade) + "," + (data.data[i+2]>>degrade) + "," + (data.data[i+1]>>degrade);
+        key = (data.data[i]>>degrade) + "," + (data.data[i+1]>>degrade) + "," + (data.data[i+2]>>degrade);
         if (!result.hasOwnProperty(key)) {
-          rgb = {r:data.data[i], g:data.data[i+2], b:data.data[i+1],count:1};
+          rgb = {r:data.data[i], g:data.data[i+1], b:data.data[i+2],count:1};
           rgb.weight = this.callback(rgb.r, rgb.g, rgb.b);
           if (rgb.weight<=0) rgb.weight = 1e-10;
           result[key]=rgb;
