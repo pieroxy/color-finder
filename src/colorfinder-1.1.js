@@ -7,7 +7,7 @@
 // http://pieroxy.net/blog/pages/color-finder/index.html
 //
 // Detection of the most prominent color in an image
-// version 1.1.1-rc1
+// version 1.1.1
 
 function ColorFinder(colorFactorCallback) {
   this.callback = colorFactorCallback;
